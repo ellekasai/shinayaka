@@ -1,0 +1,178 @@
+body {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: 'Alegreya', serif;
+  color: #444;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+p,ul,ol,table {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  padding: 0px;
+}
+ul {
+  list-style: circle;
+}
+a {
+  color: #444;
+}
+blockquote {
+  margin: 0px;
+  border-left: 3px solid #eee;
+  padding-left: 12px;
+  margin-left: -15px;
+  font-style: italic;
+}
+pre, code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 13px;
+}
+pre {
+  padding: 11px 0px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+}
+hr {
+  margin: 24px 0px;
+  border-top: none;
+  border-bottom: 1px solid #999;
+}
+img {
+  max-width: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+.header {
+  margin: 36px 0px;
+}
+.header-logo {
+  font-size: 24px;
+  line-height: 36px;
+}
+.header-logo a {
+  text-decoration: none;
+}
+.header-logo a:hover {
+  text-decoration: underline;
+}
+.header-description {
+  margin-bottom: 0px;
+}
+.header-links {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.article {
+  margin-bottom: 48px;
+}
+.article-title {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0px;
+}
+.article-title.link-title {
+  font-weight: normal;
+}
+.article-title a,
+.article-date a,
+.article-title.link-title a:hover {
+  text-decoration: none;
+}
+.article-title a:hover,
+.article-date a:hover,
+.article-title.link-title a {
+  text-decoration: underline;
+}
+.article-date {
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+.article-date.no-top-margin {
+  margin-top: 0px;
+}
+.about, .article-link-list {
+  margin: 24px 0px 12px;
+}
+.section-title {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+.divider {
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+  margin: 0px 10px;
+}
+.article-link-list ul {
+  list-style: none;
+  margin-bottom: 24px;
+}
+.article-link-list li {
+  margin-bottom: 12px;
+}
+.article-link {
+  margin-bottom: 12px;
+}
+.footer {
+  margin-bottom: 96px;
+  padding: 12px 0px 0px;
+  color: #bbb;
+}
+.fixed-links {
+ position: fixed;
+ top: 3px;
+ right: 5px;
+ color: #bbb;
+}
+.fixed-links a {
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+}
+@media only screen and (max-width: 1023px) {
+  .fixed-links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+  .fixed-links-divider {
+    display: none;
+  }
+  .fixed-links a {
+    display: block;
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 719px) {
+  body,h1,h2,h3,h4,h5,h6 {
+    font-size: 16px !important;
+  }
+  .container_12 {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 0px 20px !important;
+    width: 100% !important;
+  }
+  .header {
+    margin-top: 12px;
+  }
+  .theme-attribution {
+    display: none;
+  }
+  .divider {
+    margin: 0px;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="article clearfix">
+  <div class="grid_4">
+    <h2 class="article-title">
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </h2>
+    <p class="article-date">{{ page.date | date: "%Y/%m/%d" }}</p>
+  </div>
+  <div class="grid_8">
+    {{ content }}
+    <p>
+      <div class="fb-like" data-href="http://{{ site.host_name }}{{ page.url }}" data-send="false" data-layout="button_count" data-width="" data-show-faces="false"></div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ site.host_name }}{{ page.url }}" data-text="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" data-via="{{ site.twitter }}" data-lang="ja" data-dnt="true">ツイート</a>
+      <a href="https://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-dnt="true">@{{ site.twitter }}さんをフォロー</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, intial-scale=1.0" name="viewport">
+  <title>
+    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+  </title>
+  <link rel="stylesheet" href="/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/stylesheets/grid.css">
+  <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/syntax.css">
+  <link rel="stylesheet" href="/stylesheets/shinayaka.css">
+</head>
+<body>
+  <div class="fixed-links">
+    <a href="/#about">筆者について</a>
+    <span class="fixed-links-divider">|</span>
+    <a href="/#archive">記事一覧</a>
+  </div>
+  <div class="container_12">
+    <div class="header clearfix">
+      <div class="grid_7">
+        <h1 class="header-logo"><a href="/">{{ site.title }}</a></h1>
+        <p class="header-description">{{ site.description }}</p>
+      </div>
+      <div class="grid_4 prefix_1">
+        <ul class="header-links">
+          <li><a href="http://twitter.com/{{ site.twitter }}" target="_blank">@{{ site.twitter }}</a></li>
+          <li><a href="http://github.com/{{ site.github }}" target="_blank">github.com/{{ site.github }}</a></li>
+          <li><a href="http://{{ site.website }}"  target="_blank">{{ site.website }}</a></li>
+          <li><a href="mailto:{{ site.email }}">email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-area">
+      {{ content }}
+      <hr class="divider">
+      <div class="footer">
+        <div class="grid_7">
+          Site text &copy; {{ site.writer_name }}
+        </div>
+        <div class="grid_4 prefix_1 theme-attribution">
+          Shinayaka theme <iframe style="position: relative; top: 4px;" src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=shinayaka&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
