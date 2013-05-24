@@ -154,6 +154,9 @@ a:hover {
   body,h1,h2,h3,h4,h5,h6 {
     font-size: 16px !important;
   }
+  .header-logo {
+    font-size: 24px !important;
+  }
   .container_12 {
     width: 100%;
     padding-left: 10px;
