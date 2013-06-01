@@ -1,7 +1,7 @@
 ---
 layout: outer
 ---
-{% for page in site.posts limit:site.num_posts_on_index %}
+{% for page in site.posts limit:site.settings.num_posts_on_index %}
   {% capture content %}
     {{ page.content }}
   {% endcapture %}

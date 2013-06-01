@@ -26,10 +26,10 @@
       </div>
       <div class="grid_4 prefix_1">
         <ul class="header-links">
-          <li><a href="http://twitter.com/{{ site.twitter }}" target="_blank">@{{ site.twitter }}</a></li>
-          <li><a href="http://github.com/{{ site.github }}" target="_blank">github.com/{{ site.github }}</a></li>
-          <li><a href="http://{{ site.website }}"  target="_blank">{{ site.website }}</a></li>
-          <li><a href="mailto:{{ site.email }}">email</a></li>
+          <li><a href="http://twitter.com/{{ site.author.twitter }}" target="_blank">@{{ site.author.twitter }}</a></li>
+          <li><a href="http://github.com/{{ site.author.github }}" target="_blank">github.com/{{ site.author.github }}</a></li>
+          <li><a href="http://{{ site.author.website }}"  target="_blank">{{ site.author.website }}</a></li>
+          <li><a href="mailto:{{ site.author.email }}">email</a></li>
         </ul>
       </div>
     </div>
@@ -38,7 +38,7 @@
       <hr class="divider">
       <div class="footer">
         <div class="grid_7">
-          Site text &copy;{{ site.time | date: "%Y" }} {{ site.writer_name }}
+          Site text &copy;{{ site.time | date: "%Y" }} {{ site.author.name }}
         </div>
         <div class="grid_4 prefix_1 theme-attribution">
           Shinayaka theme <iframe style="position: relative; top: 4px;" src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=shinayaka&type=watch&count=true"
@@ -58,7 +58,7 @@
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+    _gaq.push(['_setAccount', '{{ site.code.google_analytics }}']);
     _gaq.push(['_trackPageview']);
 
     (function() {
