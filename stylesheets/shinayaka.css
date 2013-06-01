@@ -72,6 +72,9 @@ a:hover {
 .article {
   margin-bottom: 48px;
 }
+.article .grid_8 h2,h3,h4,h5,h6 {
+  margin-bottom: 12px;
+}
 .article-title {
   font-size: 15px;
   line-height: 24px;
