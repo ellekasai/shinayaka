@@ -1,0 +1,51 @@
+body {
+  font-size: $base-fs;
+  line-height: $base-lh;
+  font-family: 'Alegreya', serif;
+  color: $base-color;
+  -webkit-text-size-adjust: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: $base-fs;
+  margin: 0px;
+  padding: 0px;
+}
+p,ul,ol,table {
+  margin-top: 0px;
+  margin-bottom: $base-space*2;
+  padding: 0px;
+}
+ul {
+  list-style: circle;
+}
+a {
+  color: $base-color;
+  &:hover {
+    text-decoration: $td-none;
+  }
+}
+blockquote {
+  margin: 0px;
+  border-left:  3px $base-bs;
+  padding-left: $base-space;
+  margin-left: -15px;
+  font-style: italic;
+}
+pre, code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: $base-fs - 2;
+}
+pre {
+  padding: 11px 0px;
+  border-top:  1px $base-bs;
+  border-bottom: 1px $base-bs;
+  margin-bottom: $base-space*2;
+}
+hr {
+  margin: $base-space*2 0px;
+  border-top: none;
+  border-bottom: 1px solid #999;
+}
+img {
+  max-width: 100%;
+}

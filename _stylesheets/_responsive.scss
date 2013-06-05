@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1023px) {
+  .fixed-links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+  .fixed-links-divider {
+    display: none;
+  }
+  .fixed-links a {
+    display: block;
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 719px) {
+  body,h1,h2,h3,h4,h5,h6 {
+    font-size: $base-fs + 1 !important;
+  }
+  ol, ul {
+    margin-left: $base-space + 3;
+  }
+  blockquote {
+    margin-left: 0px;
+  }
+  .header-logo {
+    font-size: $base-fs + 9 !important;
+  }
+  .container_12 {
+    width: 100%;
+    padding-left: $base-space - 2;
+    padding-right: $base-space - 2;
+    box-sizing: border-box;
+  }
+  .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 0px 20px !important;
+    width: 100% !important;
+  }
+  .header {
+    margin-top: $base-space;
+  }
+  .theme-attribution {
+    display: none;
+  }
+  .divider {
+    margin: 0px;
+  }
+}

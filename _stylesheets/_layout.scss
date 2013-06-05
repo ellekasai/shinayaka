@@ -1,0 +1,101 @@
+
+.header {
+  margin: $base-space*3 0px;
+}
+.header-logo {
+  font-size: $base-fs + 9;
+  a {
+    text-decoration: $td-none;
+    &:hover {
+      text-decoration: $td-underline;
+    }
+  }
+}
+.header-description {
+  margin-bottom: 0px;
+}
+.header-links {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.article {
+  margin-bottom: $base-space*4;
+  .grid_8 {
+    h2,h3,h4,h5,h6{
+    margin-bottom: $base-space;
+    }
+  }
+}
+.article-title {
+  font-size: $base-fs;
+  margin: 0px;
+  a {
+    text-decoration: $td-none;
+    &:hover {
+      text-decoration: $td-underline;
+    }
+  }
+  .link-title {
+    font-weight: normal;
+    a {
+      text-decoration: $td-underline;
+      &:hover {
+        text-decoration: $td-none;
+      }
+    }
+  }
+}
+.article-date {
+  margin-top: $base-space;
+  margin-bottom: 0px;
+  a {
+    text-decoration: $td-none;
+    &:hover {
+      text-decoration: $td-underline;
+    }
+  }
+  .no-top-margin {
+    margin-top: 0px;
+  }
+}
+.about, .article-link-list {
+  margin: $base-space*2 0px $base-space;
+}
+.section-title {
+  font-size: $base-fs + 3;
+  margin-top: 0px;
+  margin-bottom: $base-space;
+}
+.divider {
+  border-top: none;
+  border-bottom: 1px solid #ddd;
+  margin: 0px 10px;
+}
+.article-link-list {
+  ul {
+  list-style: none;
+  margin-bottom: $base-space*2;
+  }
+  li {
+    margin-bottom: $base-space;
+  }
+}
+.article-link {
+  margin-bottom: $base-space;
+}
+.footer {
+  margin-bottom: $base-space*8;
+  padding: $base-space 0px 0px;
+  color: #bbb;
+}
+.fixed-links {
+ position: fixed;
+ top: 3px;
+ right: 5px;
+ color: #bbb;
+ a {
+   color: #999;
+   font-size: $base-fs - 3;
+ }
+}
