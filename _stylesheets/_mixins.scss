@@ -13,3 +13,15 @@
     @content
   }
 }
+%underline-on-hover-only {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+%hide-underline-on-hover {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

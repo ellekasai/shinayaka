@@ -11,8 +11,10 @@ layout: outer
 <div class="about clearfix">
   <div class="grid_8 suffix_4">
     <h2 class="section-title" id="about">筆者について</h2>
-    {% capture about %}{% include about_author.md %}{% endcapture %}
-    {{ about | markdownify }}
+    <div class="markdown-content">
+      {% capture about %}{% include about_author.md %}{% endcapture %}
+      {{ about | markdownify }}
+    </div>
   </div>
 </div>
 <hr class="divider">

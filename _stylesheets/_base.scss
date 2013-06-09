@@ -24,13 +24,11 @@ ol, ul {
   }
 }
 ul {
-  list-style: circle;
+  list-style: none;
 }
 a {
   color: $base-color;
-  &:hover {
-    text-decoration: none;
-  }
+  @extend %hide-underline-on-hover;
 }
 blockquote {
   border-left:  3px solid $base-border-color;
