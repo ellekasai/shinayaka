@@ -1,0 +1,54 @@
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: 'Alegreya', serif;
+  color: $base-color;
+  -webkit-text-size-adjust: 100%;
+  @include mobile {
+    font-size: $base-font-size + 1 !important;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size: $base-font-size;
+  @include mobile {
+    font-size: $base-font-size + 1 !important;
+  }
+}
+h1,h2,h3,h4,h5,h6,p,ol,ul,table,blockquote,pre,hr {
+  margin: 0px;
+  padding: 0px;
+}
+ol, ul {
+  @include mobile {
+    margin-left: $base-space + 3;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  color: $base-color;
+  @extend %hide-underline-on-hover;
+}
+blockquote {
+  border-left:  3px solid $base-border-color;
+  font-style: italic;
+  @include mobile {
+    margin-left: 0px !important;
+  }
+}
+pre, code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: $base-font-size - 2;
+}
+pre {
+  border-top:  1px solid $base-border-color;
+  border-bottom: 1px solid $base-border-color;
+}
+hr {
+  border-top: none;
+  border-bottom: 1px solid #999;
+}
+img {
+  max-width: 100%;
+}

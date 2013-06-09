@@ -1,15 +1,23 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, intial-scale=1.0" name="viewport">
   <title>
     {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
   </title>
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <link rel="stylesheet" href="/stylesheets/grid.css">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, intial-scale=1.0" name="viewport">
+  <meta property="fb:admins" content="{{ site.code.fb_admins }}"/>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:url" content="http://{{ site.settings.host_name }}{% if page.url !='/index.html' %}{{ page.url }}{% endif %}"/>
+  {% if site.settings.og_image %}
+    <meta property="og:image" content="{{ site.settings.og_image }}"/>
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:description" content="{{ site.description }}"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.author.twitter }}">
   <link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/stylesheets/syntax.css">
   <link rel="stylesheet" href="/stylesheets/shinayaka.css">
 </head>
 <body>
@@ -20,16 +28,17 @@
   </div>
   <div class="container_12">
     <div class="header clearfix">
+      {% include debug.html %}
       <div class="grid_7">
         <h1 class="header-logo"><a href="/">{{ site.title }}</a></h1>
-        <p class="header-description">{{ site.description }}</p>
+        <p>{{ site.description }}</p>
       </div>
       <div class="grid_4 prefix_1">
-        <ul class="header-links">
-          <li><a href="http://twitter.com/{{ site.twitter }}" target="_blank">@{{ site.twitter }}</a></li>
-          <li><a href="http://github.com/{{ site.github }}" target="_blank">github.com/{{ site.github }}</a></li>
-          <li><a href="http://{{ site.website }}"  target="_blank">{{ site.website }}</a></li>
-          <li><a href="mailto:{{ site.email }}">email</a></li>
+        <ul>
+          <li><a href="http://twitter.com/{{ site.author.twitter }}" target="_blank">@{{ site.author.twitter }}</a></li>
+          <li><a href="http://github.com/{{ site.author.github }}" target="_blank">github.com/{{ site.author.github }}</a></li>
+          <li><a href="http://{{ site.author.website }}"  target="_blank">{{ site.author.website }}</a></li>
+          <li><a href="mailto:{{ site.author.email }}">email</a></li>
         </ul>
       </div>
     </div>
@@ -38,7 +47,7 @@
       <hr class="divider">
       <div class="footer">
         <div class="grid_7">
-          Site text &copy;{{ site.time | date: "%Y" }} {{ site.writer_name }}
+          Site text &copy;{{ site.time | date: "%Y" }} {{ site.author.name }}
         </div>
         <div class="grid_4 prefix_1 theme-attribution">
           Shinayaka theme <iframe style="position: relative; top: 4px;" src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=shinayaka&type=watch&count=true"
@@ -58,7 +67,7 @@
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{{ site.google_analytics }}']);
+    _gaq.push(['_setAccount', '{{ site.code.google_analytics }}']);
     _gaq.push(['_trackPageview']);
 
     (function() {

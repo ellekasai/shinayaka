@@ -1,11 +1,22 @@
 title: ブログのタイトル
 description: ブログの説明文
-twitter: example
-github: example
-website: http://example.com
-email: email@example.com
-num_posts_on_index: 3
-writer_name: Jane Doe
-host_name: blog.example.com
-google_analytics: UA-XXXXXXXX-1
 permalink: /posts/:title
+markdown: redcarpet
+
+# Used by liquid
+settings:
+  num_posts_on_index: 3
+  host_name: blog.example.com
+  debug: false
+  # Comment this out and specify image URL for og:image.
+  # Otherwise, og:image will not be set.
+  # og_image: http://example.com/image.jpg
+author:
+  name: Jane Doe
+  twitter: example
+  github: example
+  website: example.com
+  email: email@example.com
+code:
+  google_analytics: UA-XXXXXXXX-1
+  fb_admins: XXXXXXXXXX

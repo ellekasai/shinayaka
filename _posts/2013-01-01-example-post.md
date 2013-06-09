@@ -21,8 +21,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, delectus imped
 
 > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, delectus impedit tempora architecto nam assumenda dignissimos quis dolor facere ducimus! Odio, tenetur minima impedit nam amet nostrum maiores temporibus fugit.
 
-{% highlight ruby %}
+```ruby
 def hello
   puts "Hello World!"
 end
-{% endhighlight %}
+```

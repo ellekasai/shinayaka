@@ -1,7 +1,7 @@
 ---
 layout: outer
 ---
-{% for page in site.posts limit:site.num_posts_on_index %}
+{% for page in site.posts limit:site.settings.num_posts_on_index %}
   {% capture content %}
     {{ page.content }}
   {% endcapture %}
@@ -11,8 +11,10 @@ layout: outer
 <div class="about clearfix">
   <div class="grid_8 suffix_4">
     <h2 class="section-title" id="about">筆者について</h2>
-    {% capture about %}{% include about_author.md %}{% endcapture %}
-    {{ about | markdownify }}
+    <div class="markdown-content">
+      {% capture about %}{% include about_author.md %}{% endcapture %}
+      {{ about | markdownify }}
+    </div>
   </div>
 </div>
 <hr class="divider">
