@@ -9,7 +9,7 @@
   <meta property="fb:admins" content="{{ site.code.fb_admins }}"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:type" content="blog"/>
-  <meta property="og:url" content="http://{{ site.settings.host_name }}{% if page.url !='/index.html' %}{{ page.url }}{% endif %}"/>
+  <meta property="og:url" content="http://{{ site.settings.host_name }}{% if page.url !='/index.html' %}{{ page.url }}/{% endif %}"/>
   {% if site.settings.og_image %}
     <meta property="og:image" content="{{ site.settings.og_image }}"/>
   {% endif %}
