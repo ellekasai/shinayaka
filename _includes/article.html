@@ -5,12 +5,12 @@
     </h2>
     <p class="article-date">{{ page.date | date: "%Y/%m/%d" }}</p>
   </div>
-  <div class="grid_8">
+  <div class="grid_8 markdown-content">
     {{ content }}
     <p>
-      <div class="fb-like" data-href="http://{{ site.host_name }}{{ page.url }}" data-send="false" data-layout="button_count" data-width="" data-show-faces="false"></div>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ site.host_name }}{{ page.url }}" data-text="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" data-via="{{ site.twitter }}" data-lang="ja" data-dnt="true">ツイート</a>
-      <a href="https://twitter.com/{{ site.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-dnt="true">@{{ site.twitter }}さんをフォロー</a>
+      <div class="fb-like" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-send="false" data-layout="button_count" data-width="" data-show-faces="false"></div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ site.settings.host_name }}{{ page.url }}" data-text="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" data-via="{{ site.author.twitter }}" data-lang="ja" data-dnt="true">ツイート</a>
+      <a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-dnt="true">@{{ site.author.twitter }}さんをフォロー</a>
     </p>
   </div>
 </div>
