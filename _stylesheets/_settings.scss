@@ -1,7 +1,8 @@
-$base-fs: 15px;
-$base-lh: 1.6;
-$base-space: 12px;
+$base-font-size: 15px;
+$heading-font-size: 24px;
+$subheading-font-size: 18px;
+$small-font-size: 12px;
+$base-line-height: 1.6;
+$base-space: ($base-font-size * $base-line-height) / 2;
 $base-color: #444;
-$base-bs: solid #eee;
-$td-none: none;
-$td-underline: underline;
+$base-border-color: #eee;

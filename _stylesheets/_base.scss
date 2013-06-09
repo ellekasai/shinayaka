@@ -1,19 +1,27 @@
 body {
-  font-size: $base-fs;
-  line-height: $base-lh;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
   font-family: 'Alegreya', serif;
   color: $base-color;
   -webkit-text-size-adjust: 100%;
+  @include mobile {
+    font-size: $base-font-size + 1 !important;
+  }
 }
 h1,h2,h3,h4,h5,h6 {
-  font-size: $base-fs;
+  font-size: $base-font-size;
+  @include mobile {
+    font-size: $base-font-size + 1 !important;
+  }
+}
+h1,h2,h3,h4,h5,h6,p,ol,ul,table,blockquote,pre,hr {
   margin: 0px;
   padding: 0px;
 }
-p,ul,ol,table {
-  margin-top: 0px;
-  margin-bottom: $base-space*2;
-  padding: 0px;
+ol, ul {
+  @include mobile {
+    margin-left: $base-space + 3;
+  }
 }
 ul {
   list-style: circle;
@@ -21,28 +29,25 @@ ul {
 a {
   color: $base-color;
   &:hover {
-    text-decoration: $td-none;
+    text-decoration: none;
   }
 }
 blockquote {
-  margin: 0px;
-  border-left:  3px $base-bs;
-  padding-left: $base-space;
-  margin-left: -15px;
+  border-left:  3px solid $base-border-color;
   font-style: italic;
+  @include mobile {
+    margin-left: 0px !important;
+  }
 }
 pre, code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-size: $base-fs - 2;
+  font-size: $base-font-size - 2;
 }
 pre {
-  padding: 11px 0px;
-  border-top:  1px $base-bs;
-  border-bottom: 1px $base-bs;
-  margin-bottom: $base-space*2;
+  border-top:  1px solid $base-border-color;
+  border-bottom: 1px solid $base-border-color;
 }
 hr {
-  margin: $base-space*2 0px;
   border-top: none;
   border-bottom: 1px solid #999;
 }

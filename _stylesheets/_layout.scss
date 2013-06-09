@@ -1,76 +1,86 @@
-
-.header {
-  margin: $base-space*3 0px;
-}
-.header-logo {
-  font-size: $base-fs + 9;
-  a {
-    text-decoration: $td-none;
-    &:hover {
-      text-decoration: $td-underline;
-    }
+%underline-on-hover-only {
+  text-decoration: none;
+  &:hover {
+      text-decoration: underline;
   }
 }
-.header-description {
-  margin-bottom: 0px;
+%hide-underline-on-hover {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.header {
+  margin: $base-space*3 0px;
+  @include mobile {
+    margin-top: $base-space;
+  }
+}
+.header-logo {
+  font-size: $heading-font-size;
+  a {
+    @extend %underline-on-hover-only;
+  }
+  @include mobile {
+    font-size: $heading-font-size !important;
+  }
 }
 .header-links {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
 .article {
   margin-bottom: $base-space*4;
-  .grid_8 {
-    h2,h3,h4,h5,h6{
-    margin-bottom: $base-space;
-    }
-  }
 }
 .article-title {
-  font-size: $base-fs;
-  margin: 0px;
   a {
-    text-decoration: $td-none;
-    &:hover {
-      text-decoration: $td-underline;
-    }
+      @extend %underline-on-hover-only;
   }
-  .link-title {
+  &.link-title {
     font-weight: normal;
     a {
-      text-decoration: $td-underline;
-      &:hover {
-        text-decoration: $td-none;
+        @extend %hide-underline-on-hover;
       }
     }
-  }
 }
 .article-date {
   margin-top: $base-space;
-  margin-bottom: 0px;
   a {
-    text-decoration: $td-none;
-    &:hover {
-      text-decoration: $td-underline;
-    }
+      @extend %underline-on-hover-only;
   }
-  .no-top-margin {
+  &.no-top-margin {
     margin-top: 0px;
+  }
+}
+.markdown-content {
+  h1,h2,h3,h4,h5,h6,p,ol,ul,table {
+    margin-bottom: $base-space;
+  }
+  blockquote {
+    margin-left: -15px;
+    padding-left: $base-space;
+  }
+  pre {
+    padding: 11px 0px;
+    margin-bottom: $base-space*2;
+  }
+  hr {
+    margin: $base-space*2 0px;
   }
 }
 .about, .article-link-list {
   margin: $base-space*2 0px $base-space;
 }
 .section-title {
-  font-size: $base-fs + 3;
-  margin-top: 0px;
+  font-size: $subheading-font-size;
   margin-bottom: $base-space;
 }
 .divider {
   border-top: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid ($base-border-color - #111);
   margin: 0px 10px;
+  @include mobile {
+    margin: 0px;
+  }
 }
 .article-link-list {
   ul {
@@ -94,8 +104,25 @@
  top: 3px;
  right: 5px;
  color: #bbb;
+ @include big-monitor {
+  display: none;
+ }
  a {
    color: #999;
-   font-size: $base-fs - 3;
+   font-size: $small-font-size;
+   @include medium-monitor {
+    display: block;
+    text-align: right;
+   }
  }
+}
+.fixed-links-divider {
+  @include medium-monitor {
+    display: none;
+  }
+}
+.theme-attribution {
+  @include mobile {
+    display: none;
+  }
 }
