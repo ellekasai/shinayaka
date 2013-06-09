@@ -42,7 +42,12 @@
   }
   blockquote {
     margin-left: -15px;
+    border-left:  3px solid $base-border-color;
+    font-style: italic;
     padding-left: $base-space;
+    @include mobile {
+      margin-left: 0px;
+    }
   }
   pre {
     padding: 11px 0px;
@@ -53,6 +58,11 @@
   }
   ul {
     list-style: circle;
+  }
+  ol, ul {
+    @include mobile {
+      margin-left: $base-space + 3;
+    }
   }
 }
 .about, .article-link-list {
