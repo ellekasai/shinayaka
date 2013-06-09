@@ -1,0 +1,15 @@
+@mixin big-monitor {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin medium-monitor {
+  @media only screen and (max-width: 1200px) and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: 719px) {
+    @content
+  }
+}
