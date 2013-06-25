@@ -13,6 +13,18 @@
     font-size: $heading-font-size !important;
   }
 }
+.search-form {
+  margin-top: $base-space;
+  color: #ccc;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+.header-archive-link {
+  color: #999;
+  @extend %underline-on-hover-only;
+}
 .article {
   margin-bottom: $base-space*4;
 }
@@ -65,20 +77,21 @@
     }
   }
 }
+.secondary-content {
+  margin-bottom: $base-space*8;
+}
 .about, .article-link-list {
-  margin: $base-space*2 0px $base-space;
+  padding: $base-space*2 0;
+  border-top: 1px solid ($base-border-color - #111);
+}
+.author-photo {
+  float: right;
+  width: $base-space*6;
+  margin: 0 0 $base-space $base-space;
 }
 .section-title {
   font-size: $subheading-font-size;
   margin-bottom: $base-space;
-}
-.divider {
-  border-top: none;
-  border-bottom: 1px solid ($base-border-color - #111);
-  margin: 0px 10px;
-  @include mobile {
-    margin: 0px;
-  }
 }
 .article-link-list {
   ul {
@@ -91,35 +104,34 @@
 .article-link {
   margin-bottom: $base-space;
 }
-.footer {
-  margin-bottom: $base-space*8;
-  padding: $base-space 0px 0px;
-  color: #bbb;
-}
-.fixed-links {
-  position: fixed;
-  top: 3px;
-  right: 5px;
-  color: #bbb;
-  @include big-monitor {
+.article-link-log {
+  text-decoration: none;
+  .log-arrow-down {
     display: none;
   }
-  a {
-    color: #999;
-    font-size: $small-font-size;
-    @include medium-monitor {
-      display: block;
-      text-align: right;
+  &:hover, &.activated {
+    .log-arrow-right {
+      display: none;
+    }
+    .log-arrow-down {
+      display: inline;
+    }
+  }
+  &.activated {
+    cursor: default;
+    .article-link-log-text {
+      text-decoration: none;
     }
   }
 }
-.fixed-links-divider {
-  @include medium-monitor {
-    display: none;
-  }
+.article-link-log-text {
+  @extend %hide-underline-on-hover;
+  font-weight: bold;
 }
-.theme-attribution {
-  @include mobile {
-    display: none;
-  }
+.article-logs {
+  display: none;
+  padding-bottom: $base-space*30;
+}
+.current-article-indicator {
+  color: #999;
 }

@@ -23,6 +23,7 @@ ul {
 }
 a {
   color: $base-color;
+  cursor: pointer;
   @extend %hide-underline-on-hover;
 }
 pre, code {
@@ -39,4 +40,11 @@ hr {
 }
 img {
   max-width: 100%;
+}
+input {
+ font-family: 'Alegreya', serif;
+ font-size: $base-font-size - 2;
+ padding: 3px;
+ color: $base-color;
+ border: 1px solid #ccc;
 }

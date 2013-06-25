@@ -7,16 +7,18 @@ markdown: redcarpet
 settings:
   num_posts_on_index: 3
   host_name: blog.example.com
-  debug: false
-  # Comment this out and specify image URL for og:image.
-  # Otherwise, og:image will not be set.
-  # og_image: http://example.com/image.jpg
+  optional:
+    # license: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US
 author:
-  name: Jane Doe
+  name: 山田 花子
   twitter: example
   github: example
   website: example.com
   email: email@example.com
+  about: あなたの自己紹介を160文字以内でここに書いてください｡
+  optional:
+    # gplus: https://plus.google.com/110578585985399309952
+    # photo: https://dl.dropboxusercontent.com/u/31114442/images.ellekasai.com/profile.jpeg
 code:
   google_analytics: UA-XXXXXXXX-1
   fb_admins: XXXXXXXXXX

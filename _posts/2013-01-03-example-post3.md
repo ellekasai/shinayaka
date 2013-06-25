@@ -1,5 +1,5 @@
 ---
-title: Example Post 1
+title: Example Post 3
 layout: post
 ---
 

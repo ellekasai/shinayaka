@@ -1,0 +1,42 @@
+<div class="secondary-content clearfix">
+  <div class="grid_8 prefix_4">
+    <div class="about">
+      <h2 class="section-title" id="about">{{ site.author.name }}</h2>
+      <div class="markdown-content">
+        {% if site.author.optional.photo %}
+          <img src="{{ site.author.optional.photo }}" class="author-photo">
+        {% endif %}
+        <p>{{ site.author.about }}</p>
+        <p><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="ja" data-dnt="true">@{{ site.author.twitter }}さんをフォロー</a></p>
+      </div>
+    </div>
+    <div class="article-link-list">
+      {% if page.previous %}
+        <div class="article-link">
+          あわせて読みたい<br>&rarr; <a href="{{ page.previous.url }}"><strong>{{ page.previous.title }}</strong></a>
+        </div>
+      {% endif %}
+      <div class="article-link" id="archive">
+        {% if page.previous %}
+          もしくは<br>
+        {% endif %}
+        <a class="article-link-log js-show-article-logs">
+          <span class="log-arrow-right">&rarr;</span><span class="log-arrow-down">&darr;</span> <span class="article-link-log-text">過去ログ</span>
+        </a>
+      </div>
+      <div class="article-logs js-article-logs">
+        {% for log_page in site.posts %}
+          <div class="article-link clearfix">
+            <h2 class="article-title link-title">
+              <a href="{{ log_page.url }}">{{ log_page.title }}</a>
+              {% if page.url == log_page.url %}
+                <span class="current-article-indicator">(このページの記事)</span>
+              {% endif %}
+            </h2>
+            <p class="article-date no-top-margin">{{ log_page.date | date: "%Y/%m/%d" }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

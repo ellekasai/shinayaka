@@ -10,8 +10,8 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:type" content="blog"/>
   <meta property="og:url" content="http://{{ site.settings.host_name }}{% if page.url !='/index.html' %}{{ page.url }}/{% endif %}"/>
-  {% if site.settings.og_image %}
-    <meta property="og:image" content="{{ site.settings.og_image }}"/>
+  {% if site.author.optional.photo %}
+    <meta property="og:image" content="{{ site.author.optional.photo }}"/>
   {% endif %}
   <meta property="og:site_name" content="{{ site.title }}"/>
   <meta property="og:description" content="{{ site.description }}"/>
@@ -21,39 +21,43 @@
   <link rel="stylesheet" href="/stylesheets/shinayaka.css">
 </head>
 <body>
-  <div class="fixed-links">
-    <a href="/#about">筆者について</a>
-    <span class="fixed-links-divider">|</span>
-    <a href="/#archive">記事一覧</a>
-  </div>
   <div class="container_12">
     <div class="header clearfix">
-      {% include debug.html %}
       <div class="grid_7">
         <h1 class="header-logo"><a href="/">{{ site.title }}</a></h1>
         <p>{{ site.description }}</p>
+        <form action="http://duckduckgo.com" method="get" class="search-form">
+          <input type="text" placeholder="サイト内を検索" name="q">
+          &middot;
+          <a class="header-archive-link js-header-archive-link">過去ログ</a>
+          <input type="hidden" name="sites" value="{{ site.settings.host_name }}">
+        </form>
       </div>
       <div class="grid_4 prefix_1">
         <ul>
-          <li><a href="http://twitter.com/{{ site.author.twitter }}" target="_blank">@{{ site.author.twitter }}</a></li>
-          <li><a href="http://github.com/{{ site.author.github }}" target="_blank">github.com/{{ site.author.github }}</a></li>
-          <li><a href="http://{{ site.author.website }}"  target="_blank">{{ site.author.website }}</a></li>
-          <li><a href="mailto:{{ site.author.email }}">email</a></li>
+          <li>
+            <a href="http://twitter.com/{{ site.author.twitter }}" target="_blank">@{{ site.author.twitter }}</a>
+            {% if site.author.optional.gplus %}
+              / <a href="{{ site.author.optional.gplus }}?rel=author" target="_blank">g+</a>
+            {% endif %}
+          </li>
+          <li>
+            <a href="http://github.com/{{ site.author.github }}" target="_blank">github.com/{{ site.author.github }}</a>
+          </li>
+          <li>
+            <a href="http://{{ site.author.website }}"  target="_blank">{{ site.author.website }}</a>
+          </li>
+          <li>
+            <a href="mailto:{{ site.author.email }}">email</a>
+            {% if site.settings.optional.license %}
+              / <a href="{{ site.settings.optional.license }}" target="_blank">license</a>
+            {% endif %}
+          </li>
         </ul>
       </div>
     </div>
     <div class="content-area">
       {{ content }}
-      <hr class="divider">
-      <div class="footer">
-        <div class="grid_7">
-          Site text &copy;{{ site.time | date: "%Y" }} {{ site.author.name }}
-        </div>
-        <div class="grid_4 prefix_1 theme-attribution">
-          Shinayaka theme <iframe style="position: relative; top: 4px;" src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=shinayaka&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-        </div>
-      </div>
     </div>
   </div>
   <div id="fb-root"></div>
@@ -76,5 +80,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
+  <script type="text/javascript" src="/javascripts/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="/javascripts/shinayaka.js"></script>
 </body>
 </html>

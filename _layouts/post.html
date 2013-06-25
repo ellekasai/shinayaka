@@ -2,14 +2,4 @@
 layout: outer
 ---
 {% include article.html %}
-<hr class="divider">
-<div class="article-link-list clearfix">
-  <div class="grid_8 suffix_4">
-    {% if page.previous %}
-      <div class="article-link">Next &rarr; <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
-      <div class="article-link">他の記事 &rarr; <a href="/#archive">記事一覧へ</a></div>
-    {% else %}
-      <div class="article-link"><a href="/#archive">記事一覧へ</a></div>
-    {% endif %}
-  </div>
-</div>
+{% include secondary_content.html %}

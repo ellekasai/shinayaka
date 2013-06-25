@@ -7,29 +7,4 @@ layout: outer
   {% endcapture %}
   {% include article.html %}
 {% endfor %}
-<hr class="divider">
-<div class="about clearfix">
-  <div class="grid_8 suffix_4">
-    <h2 class="section-title" id="about">筆者について</h2>
-    <div class="markdown-content">
-      {% capture about %}{% include about_author.md %}{% endcapture %}
-      {{ about | markdownify }}
-    </div>
-  </div>
-</div>
-<hr class="divider">
-<div class="article-link-list clearfix">
-  <div class="grid_8 suffix_4">
-    <h2 class="section-title" id="archive">記事一覧</h2>
-    {% for page in site.posts %}
-      <div class="article-link clearfix">
-        <h2 class="article-title link-title">
-        <a href="{{ page.url }}">{{ page.title }}</a>
-        </h2>
-        <p class="article-date no-top-margin">{{ page.date | date: "%Y/%m/%d" }}</p>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-
+{% include secondary_content.html %}
