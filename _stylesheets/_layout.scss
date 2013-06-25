@@ -20,6 +20,9 @@
   &:hover {
     opacity: 1;
   }
+  @include mobile {
+    opacity: 1;
+  }
 }
 .header-archive-link {
   color: #999;
