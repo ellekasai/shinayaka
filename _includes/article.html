@@ -15,11 +15,9 @@
     </div>
     <div class="comments">
       {% if current_url != '/index.html' %}
-        <div id="comments">
-          <div class="fb-comments" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-width="460" data-num-posts="3"></div>
-        </div>
+        <div class="fb-comments" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-width="460" data-num-posts="3"></div>
       {% else %}
-        <iframe src="http://www.facebook.com/plugins/comments.php?href={{ site.settings.host_name }}{{ page.url }}#comments&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>
+        <iframe src="http://www.facebook.com/plugins/comments.php?href={{ site.settings.host_name }}{{ page.url }}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>
       {% endif %}
     </div>
   </div>
