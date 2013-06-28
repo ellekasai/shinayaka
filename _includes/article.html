@@ -5,11 +5,13 @@
     </h2>
     <p class="article-date">{{ page.date | date: "%Y/%m/%d" }}</p>
   </div>
-  <div class="grid_8 markdown-content">
-    {{ content }}
-    <p>
+  <div class="grid_8">
+    <div class="markdown-content">
+      {{ content }}
+    </div>
+    <div class="share-buttons">
       <div class="fb-like" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-send="false" data-layout="button_count" data-width="" data-show-faces="false"></div>
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ site.settings.host_name }}{{ page.url }}" data-text="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" data-via="{{ site.author.twitter }}" data-lang="ja" data-dnt="true">ツイート</a>
-    </p>
+    </div>
   </div>
 </div>
