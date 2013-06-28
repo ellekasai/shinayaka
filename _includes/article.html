@@ -13,5 +13,12 @@
       <div class="fb-like" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-send="false" data-layout="button_count" data-width="" data-show-faces="false"></div>
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://{{ site.settings.host_name }}{{ page.url }}" data-text="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" data-via="{{ site.author.twitter }}" data-lang="ja" data-dnt="true">ツイート</a>
     </div>
+    <div class="comments">
+      {% if current_url != '/index.html' %}
+        <div class="fb-comments" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-width="460" data-num-posts="3"></div>
+      {% else %}
+        <iframe src="http://www.facebook.com/plugins/comments.php?href={{ site.settings.host_name }}{{ page.url }}&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe>
+      {% endif %}
+    </div>
   </div>
 </div>

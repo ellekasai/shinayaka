@@ -1,6 +1,8 @@
 ---
 layout: outer
 ---
+{% capture current_url %}{{ page.url }}{% endcapture %}
+
 {% for page in site.posts limit:site.settings.num_posts_on_index %}
   {% capture content %}
     {{ page.content }}
