@@ -25,7 +25,7 @@
   }
 }
 .header-archive-link {
-  color: #999;
+  color: $base-color-light;
   @extend %underline-on-hover-only;
 }
 .article {
@@ -79,6 +79,12 @@
       margin-left: $base-space + 3;
     }
   }
+}
+.comment-link {
+  margin-top: -2px;
+  color: $base-color-light;
+  float: right;
+  font-size: $base-font-size - 1 !important;
 }
 .comments {
   margin-top: $base-space;
@@ -139,5 +145,5 @@
   padding-bottom: $base-space*30;
 }
 .current-article-indicator {
-  color: #999;
+  color: $base-color-light;
 }
