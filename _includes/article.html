@@ -16,10 +16,10 @@
         <a href="{{ page.url }}#comments" class="comment-link">コメント (<div class="fb-comments-count" data-href="http://{{ site.settings.host_name }}{{ page.url }}" style="display: inline;"></div>)</a>
       {% endif %}
     </div>
-    <div class="comments" id="comments">
-      {% if current_url != '/index.html' %}
+    {% if current_url != '/index.html' %}
+      <div class="comments" id="comments">
         <div class="fb-comments" data-href="http://{{ site.settings.host_name }}{{ page.url }}" data-width="460" data-num-posts="1"></div>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
   </div>
 </div>
