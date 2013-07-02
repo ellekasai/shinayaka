@@ -52,8 +52,8 @@
   }
 }
 .markdown-content {
-  h1,h2,h3,h4,h5,h6,p,ol,ul,table,iframe {
-    margin-bottom: $base-space;
+  h1,h2,h3,h4,h5,h6,p,ol,ul,table,iframe,pre {
+    margin-bottom: $base-space*2;
   }
   blockquote {
     margin-left: -15px;
@@ -66,7 +66,6 @@
   }
   pre {
     padding: 11px 0px;
-    margin-bottom: $base-space*2;
   }
   hr {
     margin: $base-space*2 0px;
@@ -85,6 +84,9 @@
   color: $base-color-light;
   float: right;
   font-size: $base-font-size - 1 !important;
+}
+.share-buttons {
+  margin-top: $base-space*2;
 }
 .comments {
   margin-top: $base-space;
