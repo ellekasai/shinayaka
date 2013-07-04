@@ -78,6 +78,12 @@
       margin-left: $base-space + 3;
     }
   }
+  img {
+    max-width: 100%;
+  }
+  iframe {
+    max-width: 100%;
+  }
 }
 .comment-link {
   margin-top: -2px;
