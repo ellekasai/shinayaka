@@ -30,6 +30,9 @@
 }
 .article {
   margin-bottom: $base-space*4;
+  @include mobile {
+    margin-bottom: $base-space*2;
+  }
 }
 .article-title {
   a {
@@ -78,6 +81,12 @@
       margin-left: $base-space + 3;
     }
   }
+  img {
+    max-width: 100%;
+  }
+  iframe {
+    max-width: 100%;
+  }
 }
 .comment-link {
   margin-top: -2px;
@@ -91,6 +100,11 @@
 }
 .comments {
   margin-top: $base-space;
+  @include mobile {
+    // Facebook's bug
+    max-height: 300px;
+    overflow-y: scroll;
+  }
 }
 .secondary-content {
   margin-bottom: $base-space*8;
