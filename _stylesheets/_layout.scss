@@ -106,7 +106,7 @@
   margin-top: $base-space;
   @include mobile {
     // Facebook's bug
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
