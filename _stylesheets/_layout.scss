@@ -98,6 +98,10 @@
 .share-buttons {
   margin-top: $base-space*2;
 }
+.fb-like iframe {
+  // The popup must go above the comment box
+  z-index: 100;
+}
 .comments {
   margin-top: $base-space;
   @include mobile {
